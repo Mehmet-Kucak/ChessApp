@@ -258,11 +258,12 @@ class ChessUI:
 
         self.board.pack()
         self.updateBoard()
-        self.changeLabelC()
 
         self.whiteNN = tk.Label(self.root, text=client.nicknames[1] if client.hostC == "Black" else client.nicknames[0],
                                 font=("Segoe UI", 24), justify=tk.LEFT)
         self.whiteNN.pack(anchor="w")
+        
+        self.changeLabelC()
 
         self.checkMove()
 
